@@ -1,7 +1,6 @@
 
 import urllib, urllib2
 
-
 base_query = {
 	# period must span less than one year
 	# if shrmn and ehrmn are different, data for each 5-minute interval
@@ -27,7 +26,7 @@ print 'opening url'
 data = urllib2.urlopen('http://www.nrel.gov/midc/apps/plotspec.pl', query)
 
 print 'saving response'
-csv = open('nrel.csv', 'w')
+csv = open('nrel.csv', 'w') # 'nrel.csv' is the name of the output file.
 csv.write(data.read())
 csv.close()
 
